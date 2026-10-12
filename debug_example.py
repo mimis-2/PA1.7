@@ -1,5 +1,8 @@
 def compute_ratio(a, b):
-    return a / b  # Potential ZeroDivisionError when b == 0
+    if b == 0:
+        return 0  # Handle division by zero gracefully
+    else:
+        return a / b  # Potential ZeroDivisionError when b == 0
 
 def main():
     values = [1, 2, 3, 0, 4]
